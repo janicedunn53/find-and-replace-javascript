@@ -8,4 +8,8 @@ describe("findAndReplace", function() {
     expect(findAndReplace("hello world, hello friends", "hello", "hola")).to.equal("hola world, hola friends");
   });
 
+  it('ignores case and replaces all occurrences of a word in a string and returns the new string', function() {
+    expect(findAndReplace("HEllO world, helLO friends", "hello", "hola")).to.equal("hola world, hola friends");
+  });
+
 });
